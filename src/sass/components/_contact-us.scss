@@ -1,0 +1,61 @@
+.contact-us {
+    background-color: $color-background;
+    padding: 62px 0 82px;
+}
+
+.contact-us__title {
+    margin: 0 0 17px 0;
+}
+
+.contact-us__subtitle {
+    margin: 0 0 30px 0;
+    width: 528px;
+    height: 182px;
+}
+
+.contact-us__link {
+    @include font($weight: 400, $size: 25px, $height: 26px);
+    text-decoration: none;
+    color: $color-text;
+    margin-left: 11px;
+}
+
+.contact-us__contacts {
+    >* {
+        display: inline-flex;
+        align-items:center;
+        margin: 0;
+    }   
+}
+
+.contact-us__phone {
+    margin-bottom: 19px;
+}
+
+.contact-us__form {
+    input, textarea {
+        box-sizing: border-box;
+        border: none;
+        background-color: $color-light;
+        padding: 10px 0 10px 21px;
+        border-radius: 5px;
+        &:focus {
+            outline: 1px solid $color-primary;
+        }
+    }
+    textarea {
+        resize: none;
+        width: 100%;
+        height: 159px;
+    }
+}
+
+.contact-us__line {
+    margin: 0 0 19px;
+}
+
+.contact-us__button {
+    >* {
+        min-width: 117px;
+    }
+}

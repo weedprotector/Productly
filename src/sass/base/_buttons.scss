@@ -1,0 +1,43 @@
+.button {
+    @extend %font-primary;
+    padding: 11px 25px 13px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s;
+    &_bordered {
+        background: $color-light;
+        border: 1px solid #BCD0E5;
+        color: $color-text;
+        &:hover {
+            background: $color-hovered;
+            border-color: $color-hovered;   
+        }
+    }
+    &_colored {
+        background: $color-primary;
+        color: $color-light;
+        border: 1px solid $color-primary;
+        &:hover {
+            background: $color-additional;
+            border-color: $color-additional;
+        }
+    }
+}
+
+.link-button {
+    color: $color-primary;
+    @extend %font-add;
+    display: inline-flex;
+    align-items: center;
+    &:hover {
+        color: $color-additional;
+    }
+}
+
+.link-button__text {
+    margin-left: 9px;
+}
