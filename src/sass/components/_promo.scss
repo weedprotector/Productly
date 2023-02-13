@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include media-mobile {
+        flex-direction: column-reverse;
+    }
 }
 
 .promo {
@@ -15,6 +18,9 @@
     padding-right: 6.5rem;
     @include media-tablet {
         padding-right: 0;
+    }
+    @include media-mobile {
+        text-align: center;
     }
 }
 
@@ -31,7 +37,16 @@
             margin-right: 0;
         }
     }
-
+    @include media-mobile {
+        flex-direction: column;
+        >* {
+            margin: 0;
+            margin-bottom: 26px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 .promo__text {
@@ -41,5 +56,15 @@
     @include font($size: 1.8rem, $height: 2.8rem, $weight: normal);
     @include media-tablet {
         width: 380px;
+    }
+    @include media-mobile {
+        width: auto;
+    }
+}
+
+.promo__image {
+    @include media-mobile {
+        max-width: 100%;
+        margin-bottom: 16px;
     }
 }
