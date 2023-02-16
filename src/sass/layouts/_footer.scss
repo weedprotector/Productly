@@ -2,6 +2,15 @@
     padding: 59px 0 72px;
 }
 
+.footer__wrapper {
+    display: flex;
+}
+
+.navigation-wrapper {
+    flex-basis: 100%;
+    padding-left: 152px;
+}
+
 .footer-navigation__title {
     margin: 0 0 15px;
 }
