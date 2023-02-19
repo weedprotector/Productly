@@ -307,6 +307,22 @@ h4 {
   font-weight: 600;
   line-height: 30px;
 }
+@media (max-width: 768px) {
+  h4 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}
+@media (max-width: 415px) {
+  h4 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}
 
 h5 {
   font-size: 16px;
@@ -369,6 +385,13 @@ h5 {
 .logo-object {
   width: 160px;
   height: 30px;
+}
+
+@media (max-width: 415px) {
+  .logo-object-footer {
+    width: 129px;
+    height: 21px;
+  }
 }
 
 .logo-svg:hover .logo-path {
@@ -596,14 +619,36 @@ h5 {
 .footer {
   padding: 59px 0 72px;
 }
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 0 46px 0;
+  }
+}
 
 .footer__wrapper {
   display: flex;
+}
+@media (max-width: 768px) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
 }
 
 .navigation-wrapper {
   flex-basis: 100%;
   padding-left: 152px;
+}
+@media (max-width: 768px) {
+  .navigation-wrapper {
+    margin-top: 34px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 415px) {
+  .navigation-wrapper {
+    flex-direction: column;
+    margin-top: 27px;
+  }
 }
 
 .footer-navigation__title {
