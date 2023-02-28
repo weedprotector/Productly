@@ -1,4 +1,6 @@
 import { Article } from "./js/Article";
+import { Modal } from "./js/Modal";
+import { ArticleModal } from "./js/ArticleModal";
 
 const data = [
     {
@@ -51,7 +53,7 @@ window.onload = function() {
     }
 
     // Tags
-    addTagsClickHandler();
+    addTagsClickHandler(); 
 };
 
 const addTagsClickHandler = () => {
@@ -107,6 +109,7 @@ const renderArticlesToDOM = () => {
         strategiesWrapper.append(article.generateArticle())
     });
 
+    addStrategyClickHandler();
 }
 
 const getStrategiesWrapper = () => {
@@ -121,4 +124,23 @@ const generateArticles = (data) => {
         articles.push(new Article(article))
     });
     return articles;
+}
+
+const addStrategyClickHandler = () => {
+    document.querySelector('.strategy-wrapper').addEventListener('click', (e) => {
+        if (e.target.closest('.strategy')) {
+            let clickedStrategyId = e.target.closest('.strategy').getAttribute('data-id');
+            let clickedStrategyData = getClickedData(clickedStrategyId);
+            renderArticleModalWindow(clickedStrategyData);
+        }
+    })
+}
+
+const getClickedData = (id) => {
+    return data.find(article => article.id == id)
+}
+
+const  renderArticleModalWindow = (article) => {
+    let modal = new ArticleModal ('arcticle-modal', article);
+    modal.renderModal()
 }

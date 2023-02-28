@@ -57,3 +57,25 @@
 .strategy__name {
     margin: 0 0 29px;
 }
+
+.article-modal__content {
+    .strategy__image {
+        width: 100%;
+        @include media-tablet {
+            position: static;
+        }
+    }
+
+    .strategy__date {
+        @include font($size: 1.3rem, $weight: normal, $height: 26px);
+        margin: 0 0 5px;
+    }
+
+    .strategy__name {
+        margin-bottom: 10px;
+    }
+
+    .strategy__text {
+        margin: 0 0 12px;
+    }
+}
